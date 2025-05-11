@@ -1,0 +1,149 @@
+:root {
+  --color1: #e0e1dd;
+  --color2: #778da9;
+  --color3: #415a77;
+  --color4: #1b263b;
+  --color5: #0d1b2a;
+
+  --blanco: #ffffff;
+}
+
+body {
+  background: var(--color1);
+  color: var(--blanco);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.boton {
+  display: inline-block;
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.boton:hover {
+  color: var(--color4);
+}
+
+/* Img */
+
+div > #img_logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* Contenido */
+
+#cont {
+  position: absolute;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Opciones */
+
+#opciones {
+  background: var(--color2);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#opciones > div {
+  text-align: center;
+}
+
+#opciones > #menuOp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+#bt_ini {
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color4);
+  color: white;
+  border-radius: 1rem;
+}
+
+#bt_ini:hover {
+  background-color: var(--color3);
+}
+
+/* Búsqueda */
+
+#busqueda {
+  background: var(--color2);
+  display: grid;
+  grid-template-columns: 35% 35%;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#busqueda > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#busqueda input {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  min-width: 40%;
+  text-align: left;
+}
+
+#busqueda select {
+  font-size: 1.5rem;
+  background-color: var(--base8);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  min-width: 30%;
+}
+
+/* Cursos */
+
+#cursos {
+  background: var(--color2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#con_cursos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#curs {
+  -webkit-box-shadow: 16px 0px 30px -5px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 16px 0px 30px -5px rgba(0, 0, 0, 0.67);
+  box-shadow: 16px 0px 30px -5px rgba(0, 0, 0, 0.67);
+  background: var(--color3);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0.5rem;
+
+  border-radius: 1rem;
+}
