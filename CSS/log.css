@@ -1,0 +1,138 @@
+:root {
+  --color1: #e0e1dd;
+  --color2: #778da9;
+  --color3: #415a77;
+  --color4: #1b263b;
+  --color5: #0d1b2a;
+
+  --blanco: #ffffff;
+}
+
+body {
+  background: var(--color1);
+  color: var(--blanco);
+  font-family: "Courier New", Courier, monospace;
+}
+
+#cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  min-height: 100dvh;
+}
+
+#cont > section {
+  background: var(--color2);
+}
+
+/* Sección IZ */
+
+#iz {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#iz > img {
+  --tam: 50dvh;
+  width: var(--tam);
+  height: var(--tam);
+  object-fit: cover;
+}
+
+/* Sección DR */
+#dr {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Btn Regresar */
+#regresar {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* distancia desde la derecha */
+  z-index: 9999;
+}
+
+#boton {
+  font-size: 1.4rem;
+  display: inline-block;
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#boton:hover {
+  color: var(--color4);
+}
+
+/* Formulario */
+
+#formulario {
+  max-width: 400px;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+#cont_bt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50dvh;
+  gap: 1rem;
+}
+
+/* Boton Iniciar Sesión */
+#bt_1 {
+  display: block;
+  width: 20dvh;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color4);
+  color: var(--blanco);
+  border-radius: 1rem;
+}
+
+#bt_1:hover {
+  background-color: var(--color3);
+}
+
+/* Botón AUX */
+#bt_2 {
+  flex: 1;
+  display: block;
+  max-width: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color4);
+  color: var(--blanco);
+  border-radius: 1rem;
+}
+
+#bt_2:hover {
+  background-color: var(--color3);
+}

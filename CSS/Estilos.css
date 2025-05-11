@@ -110,11 +110,16 @@ div > #img_logo {
 }
 
 #busqueda select {
+  color: var(--blanco);
   font-size: 1.5rem;
   background-color: var(--base8);
   padding: 0.5rem;
   border-radius: 1rem;
   min-width: 30%;
+}
+
+option {
+  color: var(--color5);
 }
 
 /* Cursos */

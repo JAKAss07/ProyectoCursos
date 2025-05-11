@@ -1,0 +1,110 @@
+:root {
+  --color1: #e0e1dd;
+  --color2: #778da9;
+  --color3: #415a77;
+  --color4: #1b263b;
+  --color5: #0d1b2a;
+
+  --blanco: #ffffff;
+}
+
+body {
+  background: var(--color1);
+  color: var(--blanco);
+  font-family: "Courier New", Courier, monospace;
+
+  /* Para centrar div */
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+/* Contendedor Principal */
+#cont {
+  background: var(--color3);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* Formulario */
+#formulario {
+  max-width: 600px;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+#carrera {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+#cont_bt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50dvh;
+  gap: 1rem;
+}
+
+#colum2 {
+  display: flex;
+  gap: 10px;
+}
+
+#cam {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botones  */
+/* Boton Crear User */
+#bt_1 {
+  display: block;
+  width: 20dvh;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color4);
+  color: var(--blanco);
+  border-radius: 1rem;
+}
+
+#bt_1:hover {
+  background-color: var(--color2);
+}
+/* Btn Regresar */
+#regresar {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* distancia desde la derecha */
+  z-index: 9999;
+}
+
+#boton {
+  font-size: 1.4rem;
+  display: inline-block;
+  color: var(--color5);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#boton:hover {
+  color: var(--color3);
+}

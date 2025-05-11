@@ -38,7 +38,7 @@
                     </a>
                 </div>
                 <div>
-                    <button id="bt_ini">Iniciar Sesión</button>
+                    <button id="bt_ini" onclick="window.location.href='PHP/Login/login.php'">Iniciar Sesión</button>
                 </div>
             </div>
 

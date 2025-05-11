@@ -30,7 +30,7 @@
                         <h1>
                             <span>|</span>
                             Estudiante
-                            <span>|</span>  
+                            <span>|</span>
                         </h1>
                     </a>
                 </div>
@@ -55,7 +55,7 @@
             </div>
 
             <div>
-                <button id="bt_crc">Crear Curso</button>
+                <button id="bt_crc" onclick="window.location.href='CrearCurso.php'">Crear Curso</button>
             </div>
         </section>
 
