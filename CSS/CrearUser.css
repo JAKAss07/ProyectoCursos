@@ -108,3 +108,7 @@ input {
 #boton:hover {
   color: var(--color3);
 }
+
+.bb {
+  justify-content: center;
+}

@@ -39,6 +39,7 @@
                 </div>
                 <div>
                     <button id="bt_ini" onclick="window.location.href='PHP/Login/login.php'">Iniciar Sesión</button>
+                    <button id="bt_ini" onclick="window.location.href='PHP/CRUD_User/VerEditUser.php'">Perfil</button>
                 </div>
             </div>
 
@@ -68,13 +69,17 @@
             <div>
                 <h1>Cursos Recientes</h1>
             </div>
+
             <div id="con_cursos">
-                <div id="curs">
-                    <div>Img</div>
-                    <spam>Nombre Curso</spam>
-                    <spam>Autor</spam>
-                    <spam>Precio</spam>
-                </div>
+                <a href="PHP/CRUD_Curso/VerCurso.php" id="linkCurso">
+                    <div id="curs">
+                        <div><img src="Img/Logo.png" alt=""></div>
+                        <spam>Nombre Curso</spam>
+                        <spam>Autor</spam>
+                        <spam>Precio</spam>
+
+                    </div>
+                </a>
             </div>
         </section>
 
