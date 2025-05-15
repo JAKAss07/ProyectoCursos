@@ -1,13 +1,13 @@
 :root {
-  --color1: #e0e1dd;
-  --color2: #778da9;
-  --color3: #415a77;
-  --color4: #1b263b;
-  --color5: #0d1b2a;
+  --color1: #f6fff8;
+  --color2: #eaf4f4;
+  --color3: #cce3de;
+  --color4: #a4c3b2;
+  --color5: #6b9080;
 
   --blanco: #ffffff;
+  --negro: #000000;
 }
-
 body {
   background: var(--color1);
   color: var(--blanco);
@@ -25,7 +25,7 @@ body {
 }
 
 #cont > section {
-  background: var(--color2);
+  background: var(--color4);
 }
 
 /* Sección IZ */
@@ -73,7 +73,7 @@ body {
 }
 
 #boton:hover {
-  color: var(--color4);
+  color: var(--negro);
 }
 
 /* Formulario */
@@ -109,13 +109,14 @@ input {
   font-size: 16px;
   cursor: pointer;
   border: none;
-  background-color: var(--color4);
+  background-color: var(--color5);
   color: var(--blanco);
   border-radius: 1rem;
 }
 
 #bt_1:hover {
   background-color: var(--color3);
+  color: var(--negro);
 }
 
 /* Botón AUX */
@@ -128,11 +129,12 @@ input {
   font-size: 16px;
   cursor: pointer;
   border: none;
-  background-color: var(--color4);
+  background-color: var(--color5);
   color: var(--blanco);
   border-radius: 1rem;
 }
 
 #bt_2:hover {
   background-color: var(--color3);
+  color: var(--negro);
 }

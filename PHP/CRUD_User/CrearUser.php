@@ -49,7 +49,7 @@
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="contrasena" name="contrasena" required>
 
-            <button id="bt_1" type="submit">Ingresar</button>
+            <button id="bt_1" type="submit">Crear Usuario</button>
         </form>
     </div>
 

@@ -1,11 +1,12 @@
 :root {
-  --color1: #e0e1dd;
-  --color2: #778da9;
-  --color3: #415a77;
-  --color4: #1b263b;
-  --color5: #0d1b2a;
+  --color1: #f6fff8;
+  --color2: #eaf4f4;
+  --color3: #cce3de;
+  --color4: #a4c3b2;
+  --color5: #6b9080;
 
   --blanco: #ffffff;
+  --negro: #000000;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 
 /* Contendedor Principal */
 #cont {
-  background: var(--color3);
+  background: var(--color4);
   padding: 2rem;
   border-radius: 1rem;
 }
@@ -80,8 +81,8 @@ input {
   font-size: 16px;
   cursor: pointer;
   border: none;
-  background-color: var(--color4);
-  color: var(--blanco);
+  background-color: var(--color3);
+  color: var(--negro);
   border-radius: 1rem;
 }
 
@@ -106,7 +107,7 @@ input {
 }
 
 #boton:hover {
-  color: var(--color3);
+  color: var(--negro);
 }
 
 .bb {

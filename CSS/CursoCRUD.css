@@ -1,11 +1,12 @@
 :root {
-  --color1: #e0e1dd;
-  --color2: #778da9;
-  --color3: #415a77;
-  --color4: #1b263b;
-  --color5: #0d1b2a;
+  --color1: #f6fff8;
+  --color2: #eaf4f4;
+  --color3: #cce3de;
+  --color4: #a4c3b2;
+  --color5: #6b9080;
 
   --blanco: #ffffff;
+  --negro: #000000;
 }
 
 body {

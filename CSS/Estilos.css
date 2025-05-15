@@ -1,35 +1,27 @@
 :root {
-  --color1: #e0e1dd;
-  --color2: #778da9;
-  --color3: #415a77;
-  --color4: #1b263b;
-  --color5: #0d1b2a;
+  --color1: #f6fff8;
+  --color2: #eaf4f4;
+  --color3: #cce3de;
+  --color4: #a4c3b2;
+  --color5: #6b9080;
 
   --blanco: #ffffff;
+  --negro: #000000;
 }
 
 body {
-  background: var(--color1);
+  background: var(--color2);
   color: var(--blanco);
   font-family: "Courier New", Courier, monospace;
-}
-
-.boton {
-  display: inline-block;
-  color: var(--blanco);
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-.boton:hover {
-  color: var(--color4);
 }
 
 /* Img */
 
 div > #img_logo {
-  width: 100px;
-  height: 100px;
+  --tam: 10dvh;
+  width: var(--tam);
+  height: var(--tam);
+  object-fit: cover;
 }
 
 /* Contenido */
@@ -46,12 +38,11 @@ div > #img_logo {
 /* Opciones */
 
 #opciones {
-  background: var(--color2);
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: center;
+  background: var(--color4);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
 }
 
 #opciones > div {
@@ -61,9 +52,14 @@ div > #img_logo {
 #opciones > #menuOp {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+#menuOp h1 {
+  font-size: 1.5rem;
 }
 
 #bt_ini {
@@ -73,19 +69,40 @@ div > #img_logo {
   font-size: 16px;
   cursor: pointer;
   border: none;
-  background-color: var(--color4);
+  background-color: var(--color5);
   color: white;
   border-radius: 1rem;
 }
 
 #bt_ini:hover {
   background-color: var(--color3);
+  color: var(--negro);
 }
 
+#con_botones_sesion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+  flex: 0.4;
+}
+.boton {
+  display: inline-block;
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.boton:hover {
+  color: var(--negro);
+}
 /* Búsqueda */
 
 #busqueda {
-  background: var(--color2);
+  background: var(--color4);
   display: grid;
   grid-template-columns: 35% 35%;
   align-items: center;
@@ -102,7 +119,7 @@ div > #img_logo {
 }
 
 #busqueda input {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 0.5rem;
   border-radius: 1rem;
   min-width: 40%;
@@ -110,29 +127,32 @@ div > #img_logo {
 }
 
 #busqueda select {
-  color: var(--blanco);
-  font-size: 1.5rem;
-  background-color: var(--base8);
+  color: var(--negro);
+  font-size: 1.2rem;
+  background-color: var(--blanco);
   padding: 0.5rem;
   border-radius: 1rem;
   min-width: 30%;
 }
 
 option {
-  color: var(--color5);
+  color: var(--negro);
 }
 
 /* Cursos */
 
 #cursos {
-  background: var(--color2);
+  position: relative;
+  background: var(--color4);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+
+  height: 100%;
 }
 
 #con_cursos {
@@ -154,6 +174,9 @@ option {
   padding: 1rem;
 
   border-radius: 1rem;
+
+  /* Tamaño para el contenedor */
+  
 }
 
 #curs div {
@@ -167,16 +190,19 @@ option {
   height: auto;
 }
 
+#con_cursos a div {
+  font-size: 1rem;
+}
 /* Link Cursos */
 #linkCurso {
   font-size: 1.4rem;
   display: inline-block;
-  color: var(--blanco);
+  color: var(--negro);
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 #linkCurso:hover {
-  color: #e0e1dd;
+  color: var(--color5);
 }
