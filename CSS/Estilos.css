@@ -17,7 +17,14 @@ body {
 
 /* Img */
 
-div > #img_logo {
+#logo_i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.06;
+}
+
+#img_logo {
   --tam: 10dvh;
   width: var(--tam);
   height: var(--tam);
@@ -169,6 +176,7 @@ option {
   box-shadow: 16px 0px 30px -5px rgba(0, 0, 0, 0.67);
   background: var(--color3);
   display: flex;
+
   flex-direction: column;
   text-align: left;
   padding: 1rem;
@@ -176,7 +184,23 @@ option {
   border-radius: 1rem;
 
   /* Tamaño para el contenedor */
-  
+  width: 270px;
+  box-sizing: border-box;
+}
+
+#descripcion_curso {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#descripcion_curso p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
 }
 
 #curs div {
@@ -190,9 +214,10 @@ option {
   height: auto;
 }
 
-#con_cursos a div {
-  font-size: 1rem;
+#bn {
+  font-weight: bold;
 }
+
 /* Link Cursos */
 #linkCurso {
   font-size: 1.4rem;

@@ -74,10 +74,12 @@
                 <a href="PHP/CRUD_Curso/VerCurso.php" id="linkCurso">
                     <div id="curs">
                         <div><img src="Img/Logo.png" alt=""></div>
-                        <spam>Nombre Curso Lorem</spam>
-                        <spam>Autor</spam>
-                        <spam>Precio</spam>
+                        <div id="descripcion_curso">
+                            <p id="bn">Nombre:</p>
+                            <p>Autor:</p>
+                            <p>Precio:</p>
 
+                        </div>
                     </div>
                 </a>
             </div>
