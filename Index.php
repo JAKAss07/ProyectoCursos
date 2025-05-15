@@ -29,7 +29,7 @@
                 </div>
 
                 <div>
-                    <a href="PHP/CursosCRUD.php" class="boton">
+                    <a href="PHP/CRUD_Curso/CursosCRUD.php" class="boton">
                         <h1>
                             <span>|</span>
                             Instructor
@@ -71,7 +71,7 @@
             </div>
 
             <div id="con_cursos">
-                <a href="PHP/CRUD_Curso/VerCurso.php" id="linkCurso">
+                <a href="PHP/CRUD_Curso/VerCursoU.php" id="linkCurso">
                     <div id="curs">
                         <div><img src="Img/Logo.png" alt=""></div>
                         <div id="descripcion_curso">

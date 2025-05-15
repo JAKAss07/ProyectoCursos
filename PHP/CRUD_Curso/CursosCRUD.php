@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursos</title>
 
-    <link rel="stylesheet" href="../CSS/Estilos.css">
-    <link rel="stylesheet" href="../CSS/CursoCRUD.css">
-    <link rel="stylesheet" href="../CSS/normalize.css">
+    <link rel="stylesheet" href="../../CSS/Estilos.css">
+    <link rel="stylesheet" href="../../CSS/CursoCRUD.css">
+    <link rel="stylesheet" href="../../CSS/normalize.css">
 
 </head>
 
 <body>
     <div id="cont">
         <section id="opciones">
-            <div id="logo_i"><img src="../Img/Logo.png" id="img_logo"></div>
+            <div id="logo_i"><img src="../../Img/Logo.png" id="img_logo"></div>
             <div id="menuOp">
                 <div>
-                    <a href="../index.php" class="boton">
+                    <a href="../../index.php" class="boton">
                         <h1>
                             <span>|</span>
                             Regresar
@@ -63,14 +63,13 @@
                 <h1>Cursos Creados</h1>
             </div>
             <div id="con_cursos">
-                <a href="CRUD_Curso/VerCurso.php" id="linkCurso">
+                <a href="VerCursoU.php" id="linkCurso">
                     <div id="curs">
-                        <div><img src="../Img/Logo.png" alt=""></div>
+                        <div><img src="../../Img/Logo.png" alt=""></div>
                         <div id="descripcion_curso">
-                            <p id="bn">Nombre:</p>
+                            <p>Nombre:</p>
                             <p>Autor:</p>
                             <p>Precio:</p>
-
                         </div>
                     </div>
                 </a>
