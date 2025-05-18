@@ -2,21 +2,20 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "proyecto_mp4_db2";
+$dbname = "cursos";
 $port = "33065";
 
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
 
-// Verificar si hubo un error de conexión
-if ($conn->connect_errno) {
-    // Preparar respuesta de error en formato JSON
-    $respuesta = $conn->connect_error;
-    $respuesta = json_encode(array("mensaje" => $respuesta));
-    header('Content-Type: application/json');
-    $conn->close();
-    die(); // Detener el script en caso de error
-} else {
+header('Content-Type: application/json');
 
-    $respuesta = json_encode(array("mensaje" => "Conexión correcta"));
-    header('Content-Type: application/json');
+if ($conn->connect_errno) {
+    $respuesta = array("mensaje" => $conn->connect_error);
+    echo json_encode($respuesta);
+    $conn->close();
+    die();
+} else {
+    $respuesta = array("mensaje" => "Conexión correcta");
+    echo json_encode($respuesta);
+    $conn->close();
 }
