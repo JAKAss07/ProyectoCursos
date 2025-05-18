@@ -9,6 +9,7 @@
   --negro: #000000;
 }
 
+
 /* Búsqueda */
 
 #busqueda {
@@ -33,3 +34,4 @@
   background-color: var(--color3);
   color: var(--negro);
 }
+
