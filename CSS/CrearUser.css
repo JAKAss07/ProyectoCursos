@@ -84,6 +84,7 @@ input {
   background-color: var(--color3);
   color: var(--negro);
   border-radius: 1rem;
+  border: 2px solid var(--negro);
 }
 
 #bt_1:hover {

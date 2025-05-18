@@ -9,7 +9,6 @@
   --negro: #000000;
 }
 
-
 /* Búsqueda */
 
 #busqueda {
@@ -18,7 +17,7 @@
 }
 
 #bt_crc {
-  display: block;
+  display: inline-block;
   width: 50%;
   padding: 10px;
   margin: 10px 0;
@@ -28,10 +27,10 @@
   background-color: var(--color5);
   color: white;
   border-radius: 1rem;
+  border: 2px solid var(--negro);
 }
 
 #bt_crc:hover {
   background-color: var(--color3);
   color: var(--negro);
 }
-

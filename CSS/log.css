@@ -112,6 +112,7 @@ input {
   background-color: var(--color5);
   color: var(--blanco);
   border-radius: 1rem;
+  border: 2px solid var(--negro);
 }
 
 #bt_1:hover {
@@ -132,6 +133,7 @@ input {
   background-color: var(--color5);
   color: var(--blanco);
   border-radius: 1rem;
+  border: 2px solid var(--negro);
 }
 
 #bt_2:hover {
