@@ -51,10 +51,7 @@
                                     <option value="3D">3D</option>
                                 </select>
                             </div>
-
-                            <label for="duracionCurso">Duración del Curso:</label>
-                            <input type="text" id="duracionC" name="duracionC" required>
-
+                            
                             <label for="precioC">Precio del Curso:</label>
                             <input type="text" id="precioC" name="precioC" required>
 
