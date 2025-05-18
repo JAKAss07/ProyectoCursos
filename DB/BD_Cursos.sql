@@ -44,3 +44,12 @@ CREATE TABLE Validaciones (
     FOREIGN KEY (ID_Curso) REFERENCES Curso(ID_Curso),
     FOREIGN KEY (ID_Moderador) REFERENCES Usuario(ID)
 );
+
+CREATE TABLE Temas (
+    ID_Tema INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ID_Curso INT NOT NULL,
+    Titulo VARCHAR(150) NOT NULL,
+    Duracion int not null,
+    Descripcion text,
+    FOREIGN KEY (ID_Curso) REFERENCES Curso(ID_Curso)
+    );
