@@ -16,18 +16,9 @@
     <div id="cont">
         <section id="opciones">
             <div id="logo_i"><img src="../../Img/Logo.png" id="img_logo"></div>
-            <div id="menuOp">
+            <div id="menuOp1">
                 <div>
                     <a href="../../index.php" class="boton">
-                        <h1>
-                            <span>|</span>
-                            Regresar
-                            <span>|</span>
-                        </h1>
-                    </a>
-                </div>
-                <div>
-                    <a href="" class="boton">
                         <h1>
                             <span>|</span>
                             Estudiante

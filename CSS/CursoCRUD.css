@@ -34,3 +34,14 @@
   background-color: var(--color3);
   color: var(--negro);
 }
+
+#menuOp1 {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+  padding-right: 2rem;
+}

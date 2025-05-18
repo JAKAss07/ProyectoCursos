@@ -67,7 +67,7 @@
 
         <section id="cursos" class="recientes">
             <div>
-                <h1>Cursos Recientes</h1>
+                <h1>Cursos</h1>
             </div>
 
             <div id="con_cursos">
@@ -82,6 +82,7 @@
                         </div>
                     </div>
                 </a>
+
             </div>
         </section>
     </div>
