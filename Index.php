@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/Estilos.css">
 
+    <!-- JS-Búsqueda -->
+    <script src="JS/BusquedasU.js"></script>
 
 </head>
 
@@ -49,7 +51,7 @@
             <div>
                 <h1>Buscar</h1>
 
-                <input type="text">
+                <input id="buscar" type="text" placeholder="Buscar cursos...">
 
             </div>
             <div>
@@ -71,17 +73,6 @@
             </div>
 
             <div id="con_cursos">
-                <a href="PHP/CRUD_Curso/VerCursoU.php" id="linkCurso">
-                    <div id="curs">
-                        <div><img src="Img/Logo.png" alt=""></div>
-                        <div id="descripcion_curso">
-                            <p id="bn">Nombre:</p>
-                            <p>Autor:</p>
-                            <p>Precio:</p>
-
-                        </div>
-                    </div>
-                </a>
 
             </div>
         </section>
