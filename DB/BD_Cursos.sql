@@ -50,6 +50,8 @@ CREATE TABLE Temas (
     ID_Curso INT NOT NULL,
     Titulo VARCHAR(150) NOT NULL,
     Duracion int not null,
+    Genero varchar(50),
     Descripcion text,
     FOREIGN KEY (ID_Curso) REFERENCES Curso(ID_Curso)
     );
+   
