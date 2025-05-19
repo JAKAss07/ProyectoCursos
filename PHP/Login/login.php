@@ -20,7 +20,7 @@
         </section>
         <section id="dr">
 
-            <form id="formulario">
+            <form id="formulario" action="ProcesarLogin.php" method="POST">
                 <h2>Iniciar sesión</h2>
 
                 <label for="correo">Correo electrónico:</label>

@@ -6,7 +6,7 @@ if ($conn->connect_errno) {
     exit;
 }
 
-$sql = "SELECT Curso.ID_Curso, Curso.Titulo, Curso.Precio ,Usuario.ID AS Autor
+$sql = "SELECT Curso.ID_Curso, Curso.Titulo, Curso.Precio, Usuario.Nombre_Usuario AS Autor
         FROM Curso
         INNER JOIN Usuario ON Curso.ID_Instructor = Usuario.ID";
 
@@ -19,7 +19,7 @@ if ($result->num_rows === 0) {
         echo '
         <a href="PHP/CRUD_Curso/VerCursoU.php?id=' . $row["ID_Curso"] . '" id="linkCurso">
             <div id="curs">
-                <div><!-- htmlspecialchars($row["Titulo"])--></div>
+                <div></div>
                 <div id="descripcion_curso">
                     <p><strong>Nombre:</strong> ' . htmlspecialchars($row["Titulo"]) . '</p>
                     <p><strong>Autor:</strong> ' . htmlspecialchars($row["Autor"]) . '</p>
@@ -29,5 +29,6 @@ if ($result->num_rows === 0) {
         </a>';
     }
 }
+
 
 $conn->close();

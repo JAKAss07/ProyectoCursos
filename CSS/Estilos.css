@@ -13,6 +13,7 @@ body {
   background: var(--color2);
   color: var(--blanco);
   font-family: "Courier New", Courier, monospace;
+  height: 100%;
 }
 
 /* Img */
@@ -40,6 +41,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  min-height: 100vh;
 }
 
 /* Opciones */
@@ -151,15 +153,13 @@ option {
 /* Cursos */
 
 #cursos {
-  position: relative;
-  background: var(--color4);
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-
+  background: var(--color4);
   gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 5.1rem;
 }
 
 #con_cursos {
@@ -227,4 +227,10 @@ option {
 
 #linkCurso:hover {
   color: var(--color5);
+}
+
+/* Footer */
+#footer {
+  background-color: var(--color4);
+  min-width: 100%;
 }
