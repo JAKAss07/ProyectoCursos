@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,19 +33,29 @@
                         </h1>
                     </a>
                 </div>
+                <?php if (isset($_SESSION["Rol"]) && $_SESSION["Rol"] == 2): ?>
+                    <div>
+                        <a href="PHP/CRUD_Curso/CursosCRUD.php" class="boton">
+                            <h1>
+                                <span>|</span>
+                                Instructor
+                                <span>|</span>
+                            </h1>
+                        </a>
+                    </div>
+                <?php endif; ?>
 
-                <div>
-                    <a href="PHP/CRUD_Curso/CursosCRUD.php" class="boton">
-                        <h1>
-                            <span>|</span>
-                            Instructor
-                            <span>|</span>
-                        </h1>
-                    </a>
-                </div>
                 <div id="con_botones_sesion">
-                    <button id="bt_ini" onclick="window.location.href='PHP/Login/login.php'">Iniciar Sesión</button>
-                    <button id="bt_ini" onclick="window.location.href='PHP/CRUD_User/VerEditUser.php'">Perfil</button>
+
+                    <?php if (isset($_SESSION["ID_Usuario"])): ?>
+                        <button id="bt_ini" onclick="window.location.href='PHP/CRUD_User/VerEditUser.php'">Perfil</button>
+                        <button id="bt_ini" onclick="window.location.href='PHP/Login/logout.php'">Cerrar Sesión</button>
+                    <?php else: ?>
+                        <button id="bt_ini" onclick="window.location.href='PHP/Login/login.php'">Iniciar Sesión</button>
+                    <?php endif; ?>
+
+
+
                 </div>
             </div>
 

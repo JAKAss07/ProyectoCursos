@@ -1,3 +1,40 @@
+<?php
+session_start();
+include '../../Conexion/conexion.php';
+
+$mensaje = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $correo = $_POST["correo"];
+    $contrasena = $_POST["contrasena"];
+
+    $sql = "SELECT ID, Nombre_Usuario, Contrasena, ID_Rol FROM Usuario WHERE Correo = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $correo);
+    $stmt->execute();
+    $resultado = $stmt->get_result();
+
+    if ($resultado->num_rows === 1) {
+        $usuario = $resultado->fetch_assoc();
+
+        if (password_verify($contrasena, $usuario["Contrasena"])) {
+            $_SESSION["ID_Usuario"] = $usuario["ID"];
+            $_SESSION["Nombre_Usuario"] = $usuario["Nombre_Usuario"];
+            $_SESSION["Rol"] = $usuario["ID_Rol"];
+
+            header("Location: ../../index.php");
+            exit;
+        } else {
+            $mensaje = "Contraseña incorrecta.";
+        }
+    } else {
+        $mensaje = "Correo no encontrado.";
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,8 +56,10 @@
             <img src="../../Img/Logo.png" alt="">
         </section>
         <section id="dr">
-
-            <form id="formulario" action="ProcesarLogin.php" method="POST">
+            <?php if ($mensaje): ?>
+                <p style="color:red;"><?= htmlspecialchars($mensaje) ?></p>
+            <?php endif; ?>
+            <form id="formulario" method="POST" action="">
                 <h2>Iniciar sesión</h2>
 
                 <label for="correo">Correo electrónico:</label>
