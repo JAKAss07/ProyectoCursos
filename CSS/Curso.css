@@ -1,0 +1,211 @@
+:root {
+  --color1: #f6fff8;
+  --color2: #eaf4f4;
+  --color3: #cce3de;
+  --color4: #a4c3b2;
+  --color5: #6b9080;
+
+  --blanco: #ffffff;
+  --negro: #000000;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: var(--color4);
+  margin: 0;
+  padding: 0;
+}
+
+/* Videos */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Btn Regresar */
+#regresar {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* distancia desde la derecha */
+  z-index: 9999;
+
+  padding: 10px 20px;
+  background: var(--color5);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#boton {
+  font-size: 1.4rem;
+  display: inline-block;
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#boton:hover {
+  color: var(--negro);
+}
+
+#contGeneralCurso {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+#sec1 {
+  flex: 3;
+  margin-right: 2rem;
+  background: var(--color3);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+#cont_general h2 {
+  margin-bottom: 0.5rem;
+  color: var(--negro);
+}
+
+video {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+#requisitos,
+#descripción,
+#temas {
+  margin-top: 2rem;
+}
+
+#requisitos h2,
+#descripción h2,
+#temas h2 {
+  color: var(--negro);
+  border-bottom: 2px solid var(--blanco);
+  padding-bottom: 5px;
+}
+
+#temas #cont_subTemas {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid #0077cc;
+}
+
+#subTema {
+  margin-top: 1rem;
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+#subTema a {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#preciosCurso {
+  flex: 1;
+  background: var(--color3);
+  padding: 1.5rem;
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+#preciosCurso h2 {
+  margin: 1rem 0;
+  color: var(--blanco);
+}
+
+#infoInstructor {
+  background: var(--color3);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--blanco);
+}
+
+#titInfroIns {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #0077cc;
+  margin-bottom: 1rem;
+}
+
+#texNormal {
+  margin: 0.5rem 0;
+}
+
+/* Media Queries para vista de curso */
+@media screen and (max-width: 767px) {
+  #contGeneralCurso {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  #sec1 {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+
+  video {
+    max-height: 300px;
+  }
+
+  #regresar {
+    position: static;
+    margin: 1rem;
+    text-align: center;
+    display: block;
+  }
+
+  #preciosCurso {
+    margin-top: 1rem;
+  }
+
+  #infoInstructor {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #contGeneralCurso {
+    padding: 1.5rem;
+  }
+
+  #sec1 {
+    margin-right: 1.5rem;
+  }
+
+  video {
+    max-height: 350px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #contGeneralCurso {
+    padding: 2rem;
+  }
+
+  #sec1 {
+    margin-right: 2rem;
+  }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  #boton {
+    transition: none !important;
+  }
+}
+
+/* Mejoras de rendimiento */
+video {
+  will-change: transform;
+  transform: translateZ(0);
+}

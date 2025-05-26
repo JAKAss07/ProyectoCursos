@@ -1,0 +1,227 @@
+:root {
+  --color1: #f6fff8;
+  --color2: #eaf4f4;
+  --color3: #cce3de;
+  --color4: #a4c3b2;
+  --color5: #6b9080;
+
+  --blanco: #ffffff;
+  --negro: #000000;
+}
+
+body {
+  background: var(--color1);
+  color: var(--blanco);
+  font-family: "Courier New", Courier, monospace;
+
+  /* Para centrar div */
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+/* Contendedor Principal */
+#cont {
+  background: var(--color4);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+/* Formulario */
+#formulario {
+  max-width: 600px;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+#carrera {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+#cont_bt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50dvh;
+  gap: 1rem;
+}
+
+#colum2 {
+  display: flex;
+  gap: 10px;
+}
+
+#cam {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botones  */
+/* Boton Crear User */
+#bt_1 {
+  display: block;
+  width: 20dvh;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color3);
+  color: var(--negro);
+  border-radius: 1rem;
+  border: 2px solid var(--negro);
+}
+
+#bt_1:hover {
+  background-color: var(--color2);
+}
+/* Btn Regresar */
+#regresar {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* distancia desde la derecha */
+  z-index: 9999;
+}
+
+#boton {
+  font-size: 1.4rem;
+  display: inline-block;
+  color: var(--color5);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#boton:hover {
+  color: var(--negro);
+}
+
+.bb {
+  justify-content: center;
+}
+
+/* Mensajes */
+#mensajeS {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mensajeS p {
+  padding: 1rem;
+  background-color: var(--color3);
+  border-radius: 1rem;
+  color: var(--negro);
+}
+
+/* Media Queries para creación de usuario */
+@media screen and (max-width: 767px) {
+  body {
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  #cont {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  #formulario {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  #colum2 {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #cam {
+    width: 100%;
+  }
+
+  #cont_bt {
+    width: 100%;
+  }
+
+  #bt_1 {
+    width: 100%;
+  }
+
+  #regresar {
+    position: static;
+    margin: 1rem auto;
+    text-align: center;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #cont {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  #formulario {
+    max-width: 500px;
+  }
+
+  #cont_bt {
+    width: 40dvh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #cont {
+    max-width: 800px;
+  }
+
+  #formulario {
+    max-width: 600px;
+  }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  #boton,
+  #bt_1 {
+    transition: none !important;
+  }
+}
+
+/* Mejoras de usabilidad */
+input:focus,
+#carrera:focus {
+  outline: 2px solid var(--color5);
+  outline-offset: 2px;
+}
+
+#bt_1:focus {
+  outline: 2px solid var(--negro);
+  outline-offset: 2px;
+}
+
+/* Mejoras de rendimiento */
+input,
+#carrera {
+  will-change: transform;
+  transform: translateZ(0);
+}

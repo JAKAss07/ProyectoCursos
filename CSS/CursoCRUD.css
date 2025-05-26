@@ -1,0 +1,254 @@
+:root {
+  --color1: #f6fff8;
+  --color2: #eaf4f4;
+  --color3: #cce3de;
+  --color4: #a4c3b2;
+  --color5: #6b9080;
+
+  --blanco: #ffffff;
+  --negro: #000000;
+}
+
+/* Búsqueda */
+
+#busqueda {
+  display: grid;
+  grid-template-columns: 35% 35% 30%;
+}
+
+#bt_crc {
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color5);
+  color: white;
+  border-radius: 1rem;
+  border: 2px solid var(--negro);
+}
+
+#bt_crc:hover {
+  background-color: var(--color3);
+  color: var(--negro);
+}
+
+#menuOp1 {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+  padding-right: 2rem;
+}
+
+/* contenedor_botones_1 */
+
+#contenedor_botones_1 {
+  display: flex;
+  align-items: center; 
+  gap: 3rem; 
+}
+
+#contenedor_botones_1 form {
+  display: inline-flex; /* para que no afecte la alineación */
+  margin: 0;
+}
+/* Boton Borrar */
+.bin-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: rgb(255, 95, 95);
+  cursor: pointer;
+  border: 2px solid rgb(255, 201, 201);
+  transition-duration: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.bin-bottom {
+  width: 15px;
+  z-index: 2;
+}
+.bin-top {
+  width: 17px;
+  transform-origin: right;
+  transition-duration: 0.3s;
+  z-index: 2;
+}
+.bin-button:hover .bin-top {
+  transform: rotate(45deg);
+}
+.bin-button:hover {
+  background-color: rgb(255, 0, 0);
+}
+.bin-button:active {
+  transform: scale(0.9);
+}
+.garbage {
+  position: absolute;
+  width: 14px;
+  height: auto;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.bin-button:hover .garbage {
+  animation: throw 0.4s linear;
+}
+@keyframes throw {
+  from {
+    transform: translate(-400%, -700%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+/* Boton editar */
+.editBtn {
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(93, 93, 116);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.123);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.editBtn::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  background-color: rgb(102, 102, 141);
+  position: absolute;
+  z-index: 1;
+  transform: scale(0);
+  transition: all 0.3s;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+.editBtn:hover::before {
+  transform: scale(1);
+}
+.editBtn:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.336);
+}
+
+.editBtn svg {
+  height: 17px;
+  fill: white;
+  z-index: 3;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+.editBtn:hover svg {
+  transform: rotate(-15deg) translateX(5px);
+}
+.editBtn::after {
+  content: "";
+  width: 25px;
+  height: 1.5px;
+  position: absolute;
+  bottom: 19px;
+  left: -5px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 2;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+}
+.editBtn:hover::after {
+  transform: scaleX(1);
+  left: 0px;
+  transform-origin: right;
+}
+
+/* Media Queries para CursoCRUD */
+@media screen and (max-width: 767px) {
+  /* Ajuste de búsqueda para móvil */
+  #busqueda {
+    grid-template-columns: 100% !important;
+    gap: 1rem;
+  }
+
+  #bt_crc {
+    width: 80%;
+  }
+
+  #menuOp1 {
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  /* Ajuste de botones de acción */
+  #contenedor_botones_1 {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .bin-button,
+  .editBtn {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Ajuste de búsqueda para tablet */
+  #busqueda {
+    grid-template-columns: 30% 30% 30% !important;
+    gap: 1.5rem;
+  }
+
+  #bt_crc {
+    width: 70%;
+  }
+
+  #menuOp1 {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #busqueda {
+    grid-template-columns: 35% 35% 30%;
+  }
+
+  #contenedor_botones_1 {
+    gap: 2rem;
+  }
+}
+
+/* Mejoras de accesibilidad para botones */
+.bin-button:focus,
+.editBtn:focus {
+  outline: 2px solid var(--color5);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bin-button,
+  .editBtn,
+  .garbage {
+    transition: none !important;
+    animation: none !important;
+  }
+}

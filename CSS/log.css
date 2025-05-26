@@ -1,0 +1,245 @@
+:root {
+  --color1: #f6fff8;
+  --color2: #eaf4f4;
+  --color3: #cce3de;
+  --color4: #a4c3b2;
+  --color5: #6b9080;
+
+  --blanco: #ffffff;
+  --negro: #000000;
+}
+body {
+  background: var(--color1);
+  color: var(--blanco);
+  font-family: "Courier New", Courier, monospace;
+}
+
+#cont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  min-height: 100dvh;
+}
+
+#cont > section {
+  background: var(--color4);
+}
+
+/* Sección IZ */
+
+#iz {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#iz > img {
+  --tam: 50dvh;
+  width: var(--tam);
+  height: var(--tam);
+  object-fit: cover;
+}
+
+/* Sección DR */
+#dr {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Btn Regresar */
+#regresar {
+  position: fixed;
+  top: 20px;
+  left: 20px; /* distancia desde la derecha */
+  z-index: 9999;
+}
+
+#boton {
+  font-size: 1.4rem;
+  display: inline-block;
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#boton:hover {
+  color: var(--negro);
+}
+
+/* Formulario */
+
+#formulario {
+  max-width: 400px;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+#cont_bt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50dvh;
+  gap: 1rem;
+}
+
+/* Boton Iniciar Sesión */
+#bt_1 {
+  display: block;
+  width: 20dvh;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color5);
+  color: var(--blanco);
+  border-radius: 1rem;
+  border: 2px solid var(--negro);
+}
+
+#bt_1:hover {
+  background-color: var(--color3);
+  color: var(--negro);
+}
+
+/* Botón AUX */
+#bt_2 {
+  flex: 1;
+  display: block;
+  max-width: 50%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color5);
+  color: var(--blanco);
+  border-radius: 1rem;
+  border: 2px solid var(--negro);
+}
+
+#bt_2:hover {
+  background-color: var(--color3);
+  color: var(--negro);
+}
+/* Mensajes */
+#mensajeS {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mensajeS p {
+  padding: 1rem;
+  background-color: var(--color5);
+  border-radius: 1rem;
+  color: var(--blanco);
+}
+
+/* Media Queries para login/registro */
+@media screen and (max-width: 767px) {
+  #cont {
+    flex-direction: column;
+  }
+
+  #iz {
+    flex: none;
+    padding: 2rem 1rem;
+  }
+
+  #iz > img {
+    --tam: 30dvh;
+  }
+
+  #dr {
+    flex: none;
+    padding: 2rem 1rem;
+  }
+
+  #formulario {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  #cont_bt {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #bt_1,
+  #bt_2 {
+    width: 100%;
+    max-width: none;
+  }
+
+  #regresar {
+    position: static;
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #iz > img {
+    --tam: 40dvh;
+  }
+
+  #formulario {
+    max-width: 350px;
+  }
+
+  #cont_bt {
+    width: 40dvh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #iz > img {
+    --tam: 50dvh;
+  }
+
+  #formulario {
+    max-width: 400px;
+  }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  #boton,
+  #bt_1,
+  #bt_2 {
+    transition: none !important;
+  }
+}
+
+/* Mejoras de usabilidad */
+input:focus {
+  outline: 2px solid var(--color5);
+  outline-offset: 2px;
+}
+
+#bt_1:focus,
+#bt_2:focus {
+  outline: 2px solid var(--negro);
+  outline-offset: 2px;
+}

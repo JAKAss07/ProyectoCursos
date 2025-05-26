@@ -1,0 +1,376 @@
+:root {
+  --color1: #f6fff8;
+  --color2: #eaf4f4;
+  --color3: #cce3de;
+  --color4: #a4c3b2;
+  --color5: #6b9080;
+
+  --blanco: #ffffff;
+  --negro: #000000;
+}
+
+body {
+  background: var(--color2);
+  color: var(--blanco);
+  font-family: "Courier New", Courier, monospace;
+  height: 100%;
+}
+
+/* Img */
+
+#logo_i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.06;
+}
+
+#img_logo {
+  --tam: 10dvh;
+  width: var(--tam);
+  height: var(--tam);
+  object-fit: cover;
+}
+
+/* Contenido */
+
+#cont {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+/* Opciones */
+
+#opciones {
+  background: var(--color4);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#opciones > div {
+  text-align: center;
+}
+
+#opciones > #menuOp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+#menuOp h1 {
+  font-size: 1.5rem;
+}
+
+/* Botones */
+#bt_ini {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color5);
+  color: white;
+  border-radius: 1rem;
+  border: 2px solid var(--negro);
+}
+
+#bt_ini:hover {
+  background-color: var(--color3);
+  color: var(--negro);
+}
+
+#con_botones_sesion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+  flex: 0.4;
+}
+.boton {
+  display: inline-block;
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.boton:hover {
+  color: var(--negro);
+}
+/* Búsqueda */
+
+#busqueda {
+  background: var(--color4);
+  display: grid;
+  grid-template-columns: 35% 35%;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#busqueda > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#busqueda input {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  min-width: 40%;
+  text-align: left;
+}
+
+#busqueda select {
+  color: var(--negro);
+  font-size: 1.2rem;
+  background-color: var(--blanco);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  min-width: 30%;
+}
+
+option {
+  color: var(--negro);
+}
+
+/* Cursos */
+
+#cursos {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--color4);
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#con_cursos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#curs {
+  -webkit-box-shadow: 16px 0px 30px -5px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 16px 0px 30px -5px rgba(0, 0, 0, 0.67);
+  box-shadow: 16px 0px 30px -5px rgba(0, 0, 0, 0.67);
+  background: var(--color3);
+  display: flex;
+
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+
+  border-radius: 1rem;
+
+  /* Tamaño para el contenedor */
+  width: 270px;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+#descripcion_curso {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#descripcion_curso p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8rem;
+}
+
+#curs div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#curs div img {
+  width: 150px;
+  height: auto;
+}
+
+/* Link Cursos */
+#linkCurso {
+  font-size: 1.4rem;
+  display: inline-block;
+  color: var(--negro);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#linkCurso:hover {
+  color: var(--color5);
+}
+
+/* Footer */
+#footer {
+  background-color: var(--color4);
+  min-width: 100%;
+}
+
+/* Media Queries Base */
+@media screen and (max-width: 767px) {
+  /* Navegación móvil */
+  #opciones {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  #opciones > #menuOp,
+  #opciones > #menuOp1 {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  #logo_i {
+    margin-bottom: 1rem;
+  }
+
+  #con_botones_sesion {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Búsqueda versión móvil */
+  #busqueda {
+    grid-template-columns: 100% !important;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  #busqueda > div {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #busqueda input,
+  #busqueda select {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Ajustes de cursos para móvil */
+  #con_cursos {
+    gap: 1.5rem;
+  }
+
+  #curs {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  #curs div img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Navegación tablet */
+  #opciones > #menuOp,
+  #opciones > #menuOp1 {
+    gap: 1rem;
+  }
+
+  #con_botones_sesion {
+    flex: 0.5;
+  }
+
+  /* Búsqueda versión tablet */
+  #busqueda {
+    grid-template-columns: 45% 45% !important;
+    gap: 2rem;
+  }
+
+  #busqueda > div {
+    align-items: stretch;
+  }
+
+  /* Ajustes de cursos para tablet */
+  #curs {
+    width: 45%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Ajustes desktop */
+  #opciones > #menuOp,
+  #opciones > #menuOp1 {
+    gap: 2rem;
+  }
+
+  #busqueda {
+    gap: 2rem;
+  }
+
+  #curs {
+    width: 270px;
+  }
+}
+
+/* Mejoras generales de accesibilidad y usabilidad */
+#bt_ini,
+#bt_crc {
+  min-width: 120px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.boton {
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+#img_logo {
+  min-width: 60px;
+  min-height: 60px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Ajustes de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+/* Mejoras de rendimiento */
+#curs {
+  will-change: transform;
+  transform: translateZ(0);
+}

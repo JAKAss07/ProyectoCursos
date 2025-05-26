@@ -1,0 +1,315 @@
+:root {
+  --color1: #f6fff8;
+  --color2: #eaf4f4;
+  --color3: #cce3de;
+  --color4: #a4c3b2;
+  --color5: #6b9080;
+
+  --blanco: #ffffff;
+  --negro: #000000;
+  --rojo: #e63946;
+}
+
+body {
+  background: var(--color5);
+  color: var(--blanco);
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Btn Regresar */
+
+#boton {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: var(--negro);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  background: var(--color2);
+  padding: 0.6rem;
+  border-radius: 1rem;
+  border: 2px solid var(--negro);
+  min-width: 70%;
+}
+
+#boton:hover {
+  background-color: var(--color4);
+  color: var(--blanco);
+}
+
+/* CSS para CrearCurso */
+
+#cont_c {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Panel de la IZ */
+
+#panelD {
+  display: flex;
+  flex-direction: column;
+  min-width: 80%;
+  height: 100dvh;
+  overflow-y: auto; /* Scroll vertical solo aquí */
+}
+
+#crearCurso {
+  width: 100%;
+}
+
+/* Panel de la DER */
+#opciones_c {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  align-items: center;
+  gap: 1rem;
+
+  background: var(--color3);
+  min-width: 20%;
+  height: 100dvh;
+
+  overflow: hidden; /* Evita scroll aquí */
+}
+
+/* Img */
+#logo_i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.06;
+}
+
+#img_logo {
+  --tam: 60%;
+  width: var(--tam);
+  height: var(--tam);
+  object-fit: cover;
+}
+
+#conPaneles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* Formulario */
+#formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+#formIZ,
+#formDR,
+#tema_item {
+  max-width: 45%;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+
+#cont_bt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 50dvh;
+  gap: 1rem;
+}
+/* Selección Formulario*/
+
+#contTem {
+  --tampp: 0.8rem;
+
+  padding-bottom: var(--tampp);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#categoria {
+  color: var(--negro);
+  font-size: 1.2rem;
+  background-color: var(--blanco);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  min-width: 30%;
+}
+
+input {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  min-width: 40%;
+  text-align: left;
+  border: 1.6px solid var(--negro);
+}
+
+#categoria select {
+  color: var(--negro);
+  font-size: 1.2rem;
+  background-color: var(--blanco);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+select {
+  border: 1.6px solid var(--negro);
+}
+option {
+  color: var(--negro);
+}
+
+/* Boton */
+#boton_1 {
+  display: inline-block;
+  color: var(--negro);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background-color: var(--color3);
+}
+#boton_1:hover {
+  color: var(--blanco);
+  background: var(--color4);
+}
+
+#boton_2 {
+  display: inline-block;
+  color: var(--negro);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+#boton_2:hover {
+  color: var(--blanco);
+  background: var(--rojo);
+}
+
+/* Mensajes */
+#mensajeS {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mensajeS p {
+  padding: 1rem;
+  background-color: var(--color4);
+  border-radius: 1rem;
+  color: var(--blanco);
+}
+
+/* Media Queries para creación de curso */
+@media screen and (max-width: 767px) {
+  #cont_c {
+    flex-direction: column;
+  }
+
+  #opciones_c {
+    min-width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  #panelD {
+    min-width: 100%;
+    height: auto;
+  }
+
+  #conPaneles {
+    flex-direction: column;
+  }
+
+  #formIZ,
+  #formDR,
+  #tema_item {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  #cont_bt {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #boton {
+    min-width: 90%;
+  }
+
+  input,
+  #categoria {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #opciones_c {
+    min-width: 25%;
+  }
+
+  #panelD {
+    min-width: 75%;
+  }
+
+  #formIZ,
+  #formDR,
+  #tema_item {
+    max-width: 48%;
+  }
+
+  #cont_bt {
+    width: 40dvh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #opciones_c {
+    min-width: 20%;
+  }
+
+  #panelD {
+    min-width: 80%;
+  }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  #boton,
+  #boton_1,
+  #boton_2 {
+    transition: none !important;
+  }
+}
+
+/* Mejoras de usabilidad */
+input:focus,
+select:focus {
+  outline: 2px solid var(--color5);
+  outline-offset: 2px;
+}
+
+#boton:focus,
+#boton_1:focus,
+#boton_2:focus {
+  outline: 2px solid var(--negro);
+  outline-offset: 2px;
+}
